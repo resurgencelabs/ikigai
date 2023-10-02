@@ -1,0 +1,1 @@
+Ikigai is the Web 3 avatar of Patreon, coming to the Aztec Network. Currently in early development phase.

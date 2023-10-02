@@ -1,0 +1,2887 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,400;1,900&display=swap");
+
+:root {
+  --primaryColor: #0e130d;
+  --secondaryColor: #f6ecec;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Nunito";
+  background-color: #0e130d;
+  font-size: 1em;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+}
+/* Page Header */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  border-bottom: 0.3px solid rgba(238, 236, 246, 0.2);
+  position: relative;
+  z-index: 1000;
+}
+.pageHeader .headerContents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  text-align: center;
+  margin: 0 1em;
+}
+.pageHeader .headerContents .headerPinkText {
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: "Poppins";
+  color: var(--primaryColor);
+}
+.pageHeader .headerContents .headerGrayText {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: #ecf6edb2;
+  line-height: 1;
+}
+.pageHeader .menuBtn {
+  cursor: pointer;
+  margin-right: 2em;
+  height: 22px;
+  transition: 250ms all ease-in-out;
+}
+.pageHeader .menuBtn:hover {
+  filter: invert(50%) sepia(88%) saturate(914%) hue-rotate(280deg)
+    brightness(103%) contrast(106%);
+}
+.pageHeader .headerContents .headContent {
+  position: relative;
+}
+.pageHeader .headerContents .headContent::before {
+  content: "";
+  background-color: #ecf6edb2;
+  height: 22px;
+  width: 1px;
+  position: absolute;
+  right: -23px;
+  top: 5px;
+}
+.pageHeader .headerContents .headContent:last-child::before {
+  content: unset;
+}
+.headerSearchArea {
+  width: 45%;
+  background-color: #262237;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 2px;
+  margin-right: 1.5em;
+}
+.headerSearchArea input {
+  width: 100%;
+  background-color: #120d18;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 0.3em 0.8em;
+  color: var(--secondaryColor);
+  outline: none;
+  transition: 250ms all ease-in-out;
+}
+.headerSearchArea input:focus {
+  border: 1px solid var(--primaryColor);
+}
+.headerSearchArea button {
+  background-color: transparent;
+  border: none;
+  color: #f6ecec80;
+  margin-right: 0.2em;
+  font-size: 1.2em;
+  transition: 250ms all ease-in-out;
+}
+.headerSearchArea button:hover {
+  color: var(--primaryColor);
+}
+.pageHeader .walletBtn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 0.3em 1.3em;
+  border-radius: 0.6em;
+  font-size: 1.4em;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: 250ms all ease-in-out;
+  margin-right: 1.3em;
+}
+.pageHeader .walletBtn i {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.pageHeader .walletBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primaryColor);
+}
+.pageHeader .languageBtn {
+  border: 1px solid var(--primaryColor);
+  background-color: transparent;
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 0.3em 1em;
+  border-radius: 0.6em;
+  transition: 200ms all ease-in-out;
+}
+.pageHeader .languageBtn:hover {
+  color: var(--primaryColor);
+  border-color: var(--secondaryColor);
+}
+.pageHeader .headerButtons .dropdown-menu {
+  background-color: #120d18;
+}
+.pageHeader .headerButtons .dropdown-menu .dropdown-item {
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.pageHeader .headerButtons .dropdown-menu .dropdown-item:hover {
+  background-color: black;
+  color: var(--primaryColor);
+}
+.pageHeader .headerButtons {
+  width: 25%;
+}
+
+/* Banner Section */
+.bannerSection {
+  position: relative;
+  margin-top: 1.2em;
+}
+.bannerSection .brandCircelImg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+}
+.bannerSection .bannerImg {
+  width: 100%;
+}
+.bannerSection .socialIcons .bannerSocialLink {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 0.5em;
+  transition: 250ms all ease-in-out;
+}
+.bannerSection .socialIcons .bannerSocialLink:hover {
+  transform: translate3d(0, -3px, 0);
+}
+.bannerSection .socialIcons {
+  background: rgba(22, 0, 65, 0.85);
+  border-radius: 5px;
+  padding: 0.6em 0.2em;
+  position: absolute;
+  bottom: 70px;
+  right: 200px;
+}
+.bannerSection .socialIcons .dropdown .dropdown-item {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: white;
+  transition: 200ms all ease-in;
+}
+.bannerSection .socialIcons .dropdown button {
+  background-color: transparent;
+  border: none;
+}
+.bannerSection .socialIcons .dropdown .dropdown-item:hover {
+  background-color: unset;
+  color: var(--primaryColor);
+}
+.bannerSection .socialIcons .dropdown .dropdown-menu {
+  background: rgba(22, 0, 65, 0.85);
+  border-radius: 5px;
+  border: 1px solid var(--primaryColor);
+  min-width: 6rem !important;
+  padding: 0.4em 0;
+  margin-top: 0.9em;
+}
+
+/* Side Menu */
+.sideMenu {
+  width: 85px;
+  height: 100%;
+  background: #120d18;
+  border-right: 0.3px solid rgba(238, 236, 246, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding-top: 5.5em;
+  transition: 500ms all ease-in-out;
+}
+.sideMenu.hide {
+  left: -87px;
+}
+.sideMenu .sideMenuLink {
+  display: block;
+  text-decoration: none;
+  padding: 1em 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  transition: 250ms all ease-in-out;
+  border-radius: 0 0 2em 0;
+}
+.sideMenu .sideMenuLink img {
+  margin-bottom: 0.8em;
+  height: 21px;
+}
+.sideMenu .sideMenuLink:hover,
+.sideMenu .sideMenuLink.active {
+  background-color: var(--primaryColor);
+}
+/* Tooltip */
+.tooltip-inner {
+  background-color: var(--primaryColor);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: 800;
+  font-size: 0.8em;
+}
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: var(--primaryColor);
+}
+/* Mid Contents */
+.midContents .addBtn a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: 0.6em 0.8em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: 1px solid transparent;
+  font-family: "Poppins";
+  transition: 250ms all ease-in-out;
+}
+.midContents .addBtn a:hover {
+  background-color: transparent;
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+.midContents .addBtn {
+  text-align: right;
+  margin-top: 1.5em;
+  position: relative;
+  z-index: 100;
+}
+.container.customContainer {
+  max-width: 1360px;
+}
+.midContents .details {
+  text-align: center;
+  margin-top: 0.2em;
+}
+.mainHeading {
+  font-size: 2.6em;
+  color: var(--secondaryColor);
+  font-weight: 600;
+  margin-left: 1.5em;
+}
+.mainHeading img {
+  vertical-align: middle;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+.midContents .blackBox {
+  background-color: #120d18;
+  border-radius: 0.4em;
+  padding: 0.3em;
+  height: 100%;
+}
+.midContents .blackBox .grayHeading {
+  font-weight: 700;
+  color: #f6ecec80;
+  margin-bottom: 0.2em;
+}
+.midContents .blackBox .grayHeading i {
+  margin-left: 0.6em;
+  transition: 250ms all ease-in-out;
+  cursor: pointer;
+}
+.midContents .blackBox .grayHeading i:hover {
+  color: var(--primaryColor);
+}
+.midContents .blackBox .totals {
+  font-size: 1.2em;
+  color: var(--secondaryColor);
+  font-weight: 700;
+  line-height: 1;
+}
+.midContents .blackBox .totals img {
+  vertical-align: bottom;
+}
+.midContents .blackBox .percentNumber {
+  color: #2bb23099;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+.midContents .blackBox .percentNumber.red {
+  color: #b2322b99;
+}
+.midContents .blackBox .hashText {
+  color: #7484f9;
+  font-weight: 400;
+  font-size: 0.7em;
+  background: #291e3f;
+  border-radius: 5px;
+  padding: 0.1em 1em 0 1em;
+  display: inline-block;
+  margin-left: 0.2em;
+}
+.midContents .row.oddRow .col-lg-3 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.midContents .mainText {
+  font-weight: 700;
+  color: #958c9c;
+}
+.midContents .mainText a {
+  color: #958c9c;
+  display: inline-block;
+}
+
+/* Cards Section */
+.cardsSection {
+  border-top: 1px solid #262237;
+  padding: 1.5em 0;
+  margin-top: 1.5em;
+  position: relative;
+}
+.cardsSection .row.searchContents .headerSearchArea {
+  width: 100%;
+}
+.cardsSection .multiInputs {
+  background-color: #262237;
+  padding: 0.3em 1em;
+  border-radius: 0.8em;
+}
+.cardsSection .multiInputs .priceText {
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.cardsSection .multiInputs input {
+  width: 70px;
+  border-radius: 0.6em;
+  background-color: #120d18;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.1em 0.5em;
+}
+.cardsSection .row.searchContents .customBtn {
+  background-color: #262237;
+  border: none;
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 0.5em 0.8em;
+  border-radius: 0.8em;
+  width: 100%;
+  transition: 200ms all ease-in-out;
+}
+.cardsSection .row.searchContents .customBtn:hover {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+.cardsSection .iconSpan {
+  background-color: #262237;
+  padding: 0.4em 0.8em;
+  border-radius: 0.8em;
+  text-align: center;
+}
+.cardsSection .iconSpan a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  margin: 0 0.2em;
+  transition: 250ms all ease-in-out;
+}
+.cardsSection .iconSpan a:hover {
+  opacity: 0.7;
+}
+.cardsSection .row.searchContents .col-lg-4,
+.cardsSection .row.searchContents .col-lg-3,
+.cardsSection .row.searchContents .col-lg-2,
+.cardsSection .row.searchContents .col-lg-1,
+.cardsSection .row.searchContents .col-lg-6,
+.cardsSection .row.searchContents .col-lg-5 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.cardsSection .cardsRow {
+  margin-top: 2em;
+}
+.killerCard {
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+}
+.killerCard .favLink {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1;
+  color: var(--secondaryColor);
+  float: left;
+  margin-left: 0.2em;
+  margin-top: 0.3em;
+}
+.killerCard .favLink:hover {
+  opacity: 0.8;
+}
+.killerCard:hover {
+  box-shadow: 0 0 20px var(--primaryColor);
+  border-radius: 1em;
+  transform: scale(1.05);
+}
+.killerCard:hover .cardFooter {
+  background-color: #ff5aee;
+}
+.killerCard .cardFooter {
+  background-color: #120d18;
+  border-radius: 0 0 0.6em 0.6em;
+  padding: 1em 1em 0.5em 1em;
+  transition: 200ms all ease-in-out;
+}
+.killerCard:hover .cardText {
+  color: var(--secondaryColor);
+}
+.killerCard:hover .priceText {
+  color: var(--secondaryColor);
+}
+.killerCard:hover .cardGrayText {
+  color: var(--secondaryColor);
+}
+.killerCard:hover .cardGrayText img {
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(207deg) brightness(200%)
+    contrast(100%);
+}
+.cardsSection .cardsRow .col-lg {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.killerCard .cardImg {
+  width: 100%;
+}
+.killerCard .cardName {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+}
+.killerCard .cardText {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--primaryColor);
+}
+.killerCard .cardText img {
+  height: 15px;
+  margin-left: 0.6em;
+  vertical-align: sub;
+}
+.killerCard .footerContents {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.killerCard .cardGrayText {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #f6ecec80;
+  text-align: right;
+}
+.killerCard .priceArea {
+  text-align: right;
+  margin-top: 0.8em;
+}
+.killerCard .priceText {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #f6ecec80;
+}
+.killerCard .cardPrice {
+  color: var(--secondaryColor);
+  font-weight: 800;
+  font-size: 0.8em;
+  margin-left: 0.6em;
+}
+.cardsSection .dropdown-menu {
+  background-color: #120d18;
+}
+.cardsSection .dropdown-menu .dropdown-item {
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.cardsSection .dropdown-menu .dropdown-item:hover {
+  background-color: black;
+  color: var(--primaryColor);
+}
+.cardsSection .cardsRow .row {
+  margin-bottom: 1.7em;
+}
+.tabMenuLinks {
+  margin-top: 1.6em;
+}
+.tabMenuLinks .tabMenuLink {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 1.4em;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.8em;
+  transition: 250ms all ease-in-out;
+}
+.tabMenuLinks .tabMenuLink img {
+  margin-right: 0.8em;
+  transition: 250ms all ease-in-out;
+}
+.tabMenuLinks .tabMenuLink.active,
+.tabMenuLinks .tabMenuLink:hover {
+  border-bottom: 2px solid var(--primaryColor);
+}
+.tabMenuLinks .tabMenuLink.active img,
+.tabMenuLinks .tabMenuLink:hover img {
+  filter: invert(50%) sepia(88%) saturate(914%) hue-rotate(280deg)
+    brightness(103%) contrast(106%);
+}
+
+/* Filter Menu */
+.filterMenu {
+  position: absolute;
+  top: 28px;
+  left: 86px;
+  width: 100%;
+  max-width: 180px;
+  z-index: 100;
+}
+.filterMenu .filterMenuBnt {
+  color: var(--secondaryColor);
+  line-height: 2;
+  background-color: #140e21;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: 200ms all ease-in-out;
+}
+.filterMenu .filterMenuBnt:hover {
+  background-color: var(--primaryColor);
+}
+.filterMenu .filterMenuBnt.transform i {
+  transform: rotate(180deg);
+}
+.filterMenu .filterMenuBnt i {
+  transition: 250ms all ease-in-out;
+}
+.filterMenu .filterHeading {
+  color: var(--secondaryColor);
+  font-weight: 700;
+  font-size: 1.1em;
+  padding-left: 1em;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid #412d6a;
+}
+.filterMenu .filterMenuList {
+  background-color: #241a37;
+  padding: 1em 0;
+  margin-top: -1.2em;
+  min-height: 80vh;
+  width: 0;
+  overflow: hidden;
+  transition: 300ms all ease-in-out;
+}
+.filterMenu .filterMenuList.show {
+  width: 100%;
+  overflow: unset;
+  z-index: 200;
+}
+.filterMenu .filterText {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+}
+.filterMenu .rangeArea {
+  padding: 1em;
+  border-bottom: 1px solid #412d6a;
+}
+.filterMenu .rangeArea input {
+  width: 50px;
+  border-radius: 0.6em;
+  background-color: #2d2045;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0em 0.3em;
+}
+.filterMenu .multiDropDowns .dropdown {
+  border-bottom: 1px solid #412d6a;
+  padding: 0.6em;
+}
+.filterMenu .multiDropDowns .filterMenuBtn {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: 200ms all ease-in-out;
+}
+.filterMenu .multiDropDowns .filterMenuBtn:hover {
+  color: var(--primaryColor);
+}
+.filterMenu .multiDropDowns .filterMenuBtn .fa-list {
+  margin-right: 0.8em;
+}
+.filterMenu .multiDropDowns .filterMenuBtn .fa-chevron-down {
+  float: right;
+  margin-top: 0.2em;
+}
+.filterMenu .multiDropDowns .dropdown-menu {
+  background-color: #2d2045;
+  border: 1px solid #412d6a;
+}
+
+/* Activity Page */
+/* Killer Table Wrapper */
+.killerTableWrapper .killerTable .userImageCollector {
+  background: linear-gradient(135deg, #0f1618 0%, #6e326a 100%);
+  border-radius: 7px;
+  font-size: 0.9em;
+  padding: 0.5em 0.7em;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  transition: 250ms all ease-in-out;
+}
+.killerTableWrapper .killerTable .userImageCollector:hover {
+  background: linear-gradient(135deg, #6e326a 0%, #0f1618 100%);
+}
+.killerTableWrapper .killerTable.activityTable thead th:nth-of-type(2) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable.activityTable thead th:nth-of-type(3) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable.activityTable tbody td:nth-of-type(2) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable.activityTable tbody td:nth-of-type(3) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable tr {
+  transition: 250ms all ease-in-out;
+}
+.killerTableWrapper .killerTable tbody tr:hover {
+  background-color: #ff5aee70 !important;
+}
+.killerTableWrapper .killerTable .userImageCollector .collectorSide {
+  position: relative;
+  display: inline-block;
+}
+.killerTableWrapper .killerTable .userImageCollector .userVerfiedIcon {
+  position: absolute;
+  bottom: -2px;
+  right: -3px;
+}
+.killerTableWrapper .killerTable .userImageCollector img {
+  margin-right: 0.6em;
+}
+.killerTableWrapper {
+  margin-top: 2em;
+}
+.killerTableWrapper .killerTable thead th {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--primaryColor);
+  text-align: center;
+  border: none;
+}
+.killerTableWrapper .killerTable {
+  width: 100%;
+  background-color: #120d18;
+  border-radius: 1em;
+}
+.killerTableWrapper .killerTable .killerTabelImg {
+  height: 45px;
+  border-radius: 0.5em 0.5em 0 0;
+  margin-right: 1.4em;
+}
+.killerTableWrapper .killerTable tbody td {
+  text-align: center;
+  color: var(--secondaryColor);
+  font-size: 0.8em;
+  font-weight: 800;
+  vertical-align: middle;
+  border: none;
+  padding: 1.4em 0.4em;
+}
+.killerTableWrapper .killerTable .pinkText {
+  color: var(--primaryColor);
+}
+.killerTableWrapper .killerTable tbody tr:nth-of-type(odd) {
+  background-color: #2d2145;
+}
+
+/* Custom Paginations */
+.customPaginations {
+  margin: 2em 0;
+}
+.customPaginations .arrowLink {
+  font-size: 0.9em;
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  display: inline-block;
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 0.4em;
+  border: 1px solid transparent;
+  text-align: center;
+  line-height: 2.2;
+  margin-right: 0.3em;
+  transition: 250ms all ease-in-out;
+}
+.customPaginations .arrowLink:hover {
+  background-color: transparent;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.customPaginations .goPage {
+  color: #ffb7f8;
+  font-size: 0.7em;
+  font-weight: 600;
+  border-radius: 0.4em;
+  padding: 0.6em 4em 0.6em 0.8em;
+  display: inline-block;
+  vertical-align: bottom;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  transition: 250ms all ease-in-out;
+}
+.customPaginations .goPage:hover {
+  opacity: 0.7;
+}
+.customPaginations .paginationText {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #ffb7f8;
+  margin-top: 0.5em;
+}
+
+/* Social Page */
+.cardsSection.socialSection .socialLinks {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.cardsSection.socialSection .socialLinks .socialLink {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  background-color: #120d18;
+  border-radius: 20px;
+  padding: 0.7em 1em;
+  margin-right: 0.2em;
+  text-decoration: none;
+  transition: 250ms all ease-in-out;
+  display: inline-block;
+}
+.cardsSection.socialSection .socialLinks .socialLink.pink {
+  background-color: var(--primaryColor);
+}
+.cardsSection.socialSection .socialLinks .socialLink:hover {
+  opacity: 0.7;
+}
+.cardsSection.socialSection {
+  padding-top: 0;
+}
+.cardsSection.socialSection .row.searchContents {
+  justify-content: center;
+}
+.cardsSection.socialSection .borderDiv {
+  border-left: 1px solid #262237;
+  border-right: 1px solid #262237;
+  border-bottom: 1px solid #262237;
+  margin-left: 1em;
+  padding-top: 1.5em;
+}
+.socialLinks .socialLink i {
+  background-color: var(--primaryColor);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  line-height: 1.3;
+}
+.socialDetails {
+  display: flex;
+  border-top: 1px solid #262237;
+  align-items: baseline;
+  padding: 1.8em 5em;
+  position: relative;
+}
+.socialDetails .socialDetailsText {
+  color: white;
+  font-weight: 700;
+}
+.socialDetails .socialTime {
+  font-weight: 400;
+  color: #ffffff80;
+  font-size: 0.7em;
+  margin-left: 1.3em;
+  display: inline-block;
+}
+.socialDetails .socialDetaisLightText {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: white;
+  line-height: 1.3;
+}
+.socialDetails .imageSide {
+  margin-right: 1em;
+  position: relative;
+}
+.socialDetails .imageSide a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-size: 0.7em;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 2;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  background-color: #180d17;
+  border: 1px solid var(--primaryColor);
+}
+.socialDetails .textParent {
+  margin-bottom: 0.2em;
+}
+.socialDetails .socialLgImg {
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+.socialDetails .socialDetailsIconLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primaryColor);
+  position: absolute;
+  right: 200px;
+  top: 40px;
+  transition: 250ms all ease-in-out;
+}
+.socialDetails .socialDetailsIconLink:hover {
+  text-shadow: 0 0 10px var(--primaryColor);
+}
+.centerText {
+  text-align: center;
+}
+.centerText a {
+  font-weight: 700;
+  color: var(--primaryColor);
+  text-decoration: none;
+  display: inline-block;
+  transition: 250ms all ease-in-out;
+}
+.centerText a:hover {
+  text-shadow: 0 0 10px var(--secondaryColor);
+}
+
+/* Leaderboard Page */
+.killerTableWrapper .killerTableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.killerTableWrapper .killerTableHeader .killerTablePinkHeading {
+  font-weight: 700;
+  font-weight: 0.9em;
+  color: var(--primaryColor);
+}
+.killerTableWrapper .killerTableHeader .daysLink {
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 800;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 0.4em;
+  transition: 250ms all ease-in-out;
+}
+.killerTableWrapper .killerTableHeader {
+  background-color: #120d18;
+  padding: 0.6em 4em 0 2.8em;
+  border-radius: 1em 1em 0 0;
+}
+.killerTableWrapper .killerTableHeader.odd {
+  padding: 0.6em 2em 0 2em;
+}
+.killerTableWrapper .killerTableHeader .daysLink:hover,
+.killerTableWrapper .killerTableHeader .daysLink.active {
+  color: var(--primaryColor);
+}
+.killerTable.leaderboardTable {
+  border-radius: 0 0 1em 1em;
+}
+.killerTable.leaderboardTable .tableColorfulImgIcon {
+  margin-right: 0.4em;
+}
+.killerTableWrapper .killerTable.leaderboardTable tbody td {
+  padding: 1.7em 0.4em;
+}
+.killerTableWrapper .killerTable.leaderboardTable thead th:nth-of-type(2) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable.leaderboardTable tbody td:nth-of-type(2) {
+  text-align: left;
+}
+
+/* Analytic Page */
+#multiCharts2 {
+  max-width: 100%;
+  margin: 35px auto;
+}
+#multiCharts .apexcharts-toolbar {
+  display: none;
+}
+.analyticsCharts .chartParent {
+  background: #120d18;
+  border: 2px solid #262237;
+  border-radius: 7px;
+  padding: 0.6em 1em;
+  margin-top: 2.3em;
+  position: relative;
+}
+.analyticsCharts .chartParent .chartPercentParent {
+  position: absolute;
+  z-index: 10;
+  right: 80px;
+  top: 130px;
+}
+.analyticsCharts .chartParent .chartPersentText {
+  font-weight: 800;
+  color: var(--secondaryColor);
+  font-size: 0.7em;
+  margin-bottom: 1.4em;
+}
+.analyticsCharts .chartParent .chartLabel {
+  font-weight: 700;
+  font-size: 0.8em;
+  color: #ffffff50;
+  text-align: center;
+}
+.analyticsCharts .daysLink {
+  color: var(--secondaryColor);
+  font-size: 0.8em;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 1em;
+  transition: 250ms all ease-in-out;
+}
+.analyticsCharts .daysLink:hover,
+.analyticsCharts .daysLink.active {
+  color: var(--primaryColor);
+}
+.analyticsCharts .chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+.analyticsCharts .chartHeading {
+  color: var(--secondaryColor);
+  font-weight: 800;
+  font-size: 1.3em;
+}
+.analyticsCharts .chartHeading img {
+  vertical-align: revert;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+.analyticsCharts .brandName {
+  color: var(--secondaryColor);
+  font-weight: 700;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 1em;
+}
+.analyticsCharts #donutChart2,
+.analyticsCharts #donutChart1,
+#dotsChart,
+#horizontalBarChartCanvas,
+#barChart {
+  margin-top: 3em;
+}
+.apexcharts-toolbar {
+  display: none !important;
+}
+#barChart
+  .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+  display: none !important;
+}
+#donutChart1 {
+  max-width: 450px;
+  margin-bottom: 3em;
+}
+#donutChart2 {
+  max-width: 430px;
+  margin-bottom: 3em;
+}
+#nav-tab {
+  border-bottom: none;
+}
+#nav-tab .daysLink {
+  margin-left: 1.5em;
+}
+#nav-tabContent .brandName {
+  margin-bottom: 1em;
+}
+.analyticsCharts {
+  position: relative;
+  z-index: 100;
+}
+
+/* Nft Page */
+/* Nfts Section */
+.midContents.nftsSection {
+  text-align: center;
+  padding-top: 6em;
+}
+.midContents.nftsSection .nftsUserImgBox {
+  padding: 0.6em;
+  position: relative;
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  border-radius: 50%;
+  margin-bottom: 0.6em;
+  background: linear-gradient(135deg, #22cf9b 0%, #8e21ae 100%);
+}
+.midContents.nftsSection .nftsUserImgBox .nftsUserTag {
+  position: absolute;
+  bottom: 18px;
+  right: 10px;
+}
+.midContents.nftsSection .nftsHeading {
+  font-size: 2.4em;
+  font-weight: 800;
+  color: var(--secondaryColor);
+}
+.midContents.nftsSection .nftsHeading .notification {
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 800;
+  color: white;
+  font-size: 0.3em;
+  line-height: 1.8;
+  vertical-align: middle;
+  margin-left: 0.2em;
+  background-color: var(--primaryColor);
+  text-align: center;
+}
+.midContents.nftsSection .details {
+  margin-top: 0;
+}
+.midContents.nftsSection .nftsText {
+  color: #f6ecec80;
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.midContents.nftsSection .nftsText.odd {
+  font-size: 0.8em;
+  margin-top: 0.4em;
+}
+.midContents.nftsSection .nftsUserEmail {
+  font-weight: 700;
+  font-size: 0.9em;
+  margin: 0 0.8em;
+  color: var(--primaryColor);
+}
+.midContents.nftsSection .follows .followText {
+  font-size: 0.8em;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  font-weight: 500;
+  margin: 0 0.4em;
+}
+.midContents.nftsSection .follows {
+  margin-top: 1.3em;
+}
+.midContents.nftsSection .follows .followText span {
+  font-weight: 800;
+}
+.midContents.nftsSection .aboutnftsUserLinks .commonStyle {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-size: 0.8em;
+  font-weight: 600;
+  border: 1px solid #262237;
+  border-radius: 15px;
+  transition: 250ms all ease-in-out;
+  margin-right: 0.3em;
+}
+.midContents.nftsSection .aboutnftsUserLinks {
+  margin-top: 1em;
+}
+.midContents.nftsSection .aboutnftsUserLinks .commonStyle.nftBtn {
+  padding: 0.4em 1.3em;
+}
+.midContents.nftsSection .aboutnftsUserLinks .commonStyle:hover {
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.midContents.nftsSection .aboutnftsUserLinks .commonStyle.nftBtn.pink {
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.midContents.nftsSection .aboutnftsUserLinks .commonStyle.nftSocialLink {
+  border-radius: 50px;
+  padding: 0.3em;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 1.8;
+}
+.cardsSection .row.searchContents .customBtn.odd {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.killerTableWrapper .killerTable.nftsTable thead th:nth-of-type(2) {
+  text-align: left;
+}
+.killerTableWrapper .killerTable.nftsTable tbody td:nth-of-type(2) {
+  text-align: left;
+}
+
+/* Nfts Analytics Page */
+.analyticsCharts.nftsCharts .nftsGrayHeading {
+  color: #f6ececcc;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.analyticsCharts.nftsCharts .nftsGrayHeading img {
+  cursor: pointer;
+  margin-left: 0.4em;
+}
+.analyticsCharts.nftsCharts .chartHeader {
+  margin-top: 1.2em;
+}
+.analyticsCharts.nftsCharts .nftsTotals {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--secondaryColor);
+  margin: 0.5em 0;
+}
+.analyticsCharts.nftsCharts .nftsDays {
+  font-weight: 500;
+  color: #f6ececcc;
+  font-size: 0.8em;
+  width: 40px;
+  display: inline-block;
+}
+.analyticsCharts.nftsCharts .nftsPoints {
+  font-size: 0.8em;
+  font-weight: 800;
+  color: #c00024;
+}
+.analyticsCharts.nftsCharts .nftsPoints.green {
+  color: #00c054;
+}
+.analyticsCharts.nftsCharts .nftsPoints.nill {
+  color: var(--secondaryColor);
+  font-weight: 800;
+}
+.analyticsCharts.nftsCharts .daysLink.red {
+  color: #c0425e;
+}
+#multiCharts3
+  .apexcharts-legend.apexcharts-align-center.apx-legend-position-top {
+  display: none !important;
+}
+#dotsChart3 {
+  margin-top: 3em;
+}
+
+/* Buy Page */
+.buyNftSection {
+  padding: 5em 0;
+}
+.buyNftSection .nftMainPage {
+  display: block;
+  margin: 6em auto 0 auto;
+}
+.buyNftSection .buyNftHeader .buynftHeading {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: var(--secondaryColor);
+  line-height: 1;
+}
+.buyNftSection .buyNftHeader .buynftPinkHeading {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.buyNftSection .buyNftHeader .buynftPinkHeading img {
+  vertical-align: middle;
+}
+.buyNftSection .buyNftHeader .buynftPinkHeading .vTag {
+  height: 15px;
+  margin-left: 0.4em;
+}
+.buyNftSection .buyNftHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+.buyNftSection .buyNftSocialLinks {
+  background-color: #1f1c2d;
+  border: 1px solid #1f1c2d;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 0.2em;
+}
+.buyNftSection .buyNftSocialLinks .socialLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-weight: 500;
+  font-size: 0.9em;
+  margin: 0 0.3em;
+  transition: 200ms all ease-in-out;
+}
+.buyNftSection .buyNftSocialLinks .socialLink:hover {
+  color: var(--primaryColor);
+}
+/* custom accordion */
+.buyNftSection button.accordion {
+  background-color: transparent;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 18px 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  background-color: #1f1c2d;
+  border-radius: 6px;
+  transition: 250ms all ease-in-out;
+}
+.buyNftSection button.accordion img {
+  margin-right: 0.6em;
+  vertical-align: middle;
+}
+.buyNftSection > .container .custom-collapse:last-child button.accordion {
+  border-bottom: none;
+}
+.buyNftSection > .container .custom-collapse:last-child .panel p {
+  padding-top: 0;
+}
+.buyNftSection div.panel {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  margin: 1em 0 0.6em 0;
+}
+.buyNftSection button.accordion:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  color: #f6ecec80;
+  font-size: 0.9em;
+  float: right;
+  margin-right: 0.5em;
+}
+.buyNftSection .accordion {
+  color: var(--primaryColor);
+}
+.buyNftSection .accordion.active {
+  color: var(--primaryColor);
+  box-shadow: 0 0 6px var(--primaryColor);
+}
+.buyNftSection button.accordion.active:after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--primaryColor);
+}
+.buyNftSection .collapseDetailsBody .collapseDetailsText {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #f6ecec80;
+}
+.buyNftSection .attributeCollapse .collapseDetailsBody .collapseDetailsText {
+  font-weight: 500;
+}
+.buyNftSection .collapseDetailsBody .collapseDetailsText.pink {
+  color: var(--primaryColor);
+}
+.buyNftSection .collapseDetailsBody .collapseDetailsText.white {
+  color: var(--secondaryColor);
+}
+.buyNftSection .collapseDetailsParent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2em;
+}
+.buyNftSection .collapseDetailsParent .collapseTextImg {
+  margin-right: 0.6em;
+}
+.buyNftSection .collapseDetailsBody {
+  background-color: #181126;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+.buyNftSection .attributeCollapse .collapseDetailsText {
+  margin-bottom: 0.2em;
+}
+.buyNftSection .commonCollapse .commonCollapseBody {
+  background-color: #181126;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6em;
+}
+.buyNftSection .commonCollapse .commonCollapseBody .collapseImgText {
+  font-weight: 600;
+  font-size: 0.8em;
+  color: var(--secondaryColor);
+}
+.buyNftSection .commonCollapse .commonCollapseBody .collapseImgText span {
+  color: #f6ecec80;
+}
+.buyNftSection .commonCollapse .commonCollapseBody .commonCollapseHistory {
+  color: #f6ecec80;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.buyNftSection .commonCollapse .commonCollapseBody .commonCollapseImgSide {
+  display: flex;
+  align-items: center;
+}
+.buyNftSection
+  .commonCollapse
+  .commonCollapseBody
+  .commonCollapseImgSide
+  .commonCollapseImgParent {
+  position: relative;
+  margin-right: 0.8em;
+}
+.buyNftSection .commonCollapse .commonCollapseBody .commonCollapseImgTag {
+  position: absolute;
+  height: 12px;
+  bottom: -3px;
+  right: 0;
+}
+.buyNftSection .commonCollapse .commonCollapseBoldText {
+  color: #f6ecec80;
+  font-weight: 800;
+  font-size: 0.8em;
+}
+.buyNftSection .collapseButton .collapseBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  border-radius: 0.4em;
+  font-size: 0.9em;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-family: "Poppins";
+  width: 100%;
+  max-width: 175px;
+  text-align: center;
+  padding: 0.7em;
+  transition: 250ms all ease-in-out;
+}
+.buyNftSection .collapseButton .collapseBtn:hover {
+  opacity: 0.7;
+}
+.buyNftSection .collapseButton .collapseBtn.borderBtn {
+  color: var(--primaryColor);
+  margin-left: 1em;
+  border-color: var(--primaryColor);
+  background-color: transparent;
+}
+.buyNftSection .collapseButton {
+  border-top: 4px solid #1f1c2d;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+  margin-top: 5em;
+  position: sticky;
+  bottom: 0px;
+  background-color: #1e162e20;
+  backdrop-filter: blur(30px);
+  z-index: 1000;
+}
+.buyNftSection .cardsCollapse .killerCard img {
+  display: unset;
+  width: unset;
+}
+.buyNftSection .cardsCollapse .killerCard .cardImg {
+  width: 100%;
+}
+.buyNftSection .cardsCollapse .killerCard:hover {
+  box-shadow: none;
+  transform: unset;
+}
+.buyNftSection .priceCollapse .collapseChartParent {
+  background-color: #181126;
+  border-radius: 6px;
+  padding: 1em 2em;
+}
+.customCollapse .owl-next span {
+  color: var(--secondaryColor);
+  height: 38px;
+  width: 38px;
+  background-color: #140e21;
+  font-size: 3em;
+  line-height: 0.7;
+  font-weight: 600;
+  position: absolute;
+  right: 4px;
+  top: 40%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  transition: 250ms all ease-in-out;
+}
+.customCollapse .owl-next span:hover {
+  background-color: var(--primaryColor);
+}
+.customCollapse .owl-prev {
+  display: none;
+}
+#collapseCards .killerCard .cardFooter {
+  padding: 0.5em;
+}
+
+/* About Page */
+.aboutBlackBox {
+  background-color: #120d18;
+  border-radius: 11px;
+  padding: 2em 1em;
+  margin-bottom: 1.3em;
+}
+.aboutBlackBox .aboutHeading {
+  font-weight: 500;
+  color: var(--primaryColor);
+  font-family: "Poppins";
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+.aboutBlackBox .aboutText {
+  font-family: "Poppins";
+  color: #ffffffb2;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+.aboutBlackBox li.aboutText {
+  list-style: disc;
+}
+.aboutBlackBox .aboutImg {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.aboutBlackBox .overviewHeader .aboutHeading {
+  display: inline-block;
+}
+.aboutBlackBox .overviewHeader .aboutText {
+  display: inline-block;
+  float: right;
+  margin-bottom: 0;
+  margin-top: 2.5em;
+}
+.aboutBlackBox .overviewHeader .aboutText span {
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+.aboutBlackBox .aboutSubHeading {
+  color: #ffffffb2;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Poppins";
+  margin-bottom: 0.5em;
+}
+.aboutBlackBox .aboutSubHeading span {
+  color: var(--primaryColor);
+}
+.aboutBlackBox .aboutSocialIcons {
+  font-size: 2em;
+  color: #f6ececb2;
+  display: inline-block;
+  text-decoration: none;
+  transition: 250ms all ease-in-out;
+  margin: 0 0.3em;
+}
+.aboutBlackBox .aboutSocialIcons:hover {
+  color: var(--primaryColor);
+  transform: scale3d(-1, 1, -1);
+}
+
+/* Landing Page */
+body.home {
+  background-color: #0e130d;
+}
+.homeWrapper {
+  text-align: center;
+  padding: 6em 3em;
+}
+.homeWrapper .homeText {
+  color: #51cea0;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.homeWrapper .homeText2 {
+  color: black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 400%;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.homeWrapper .homeImg {
+  margin-bottom: 1.5em;
+}
+.homeWrapper .homeInput {
+  width: 100%;
+  padding: 0.4em 0.7em;
+  outline: none;
+  border: 1px solid transparent;
+  transition: 200ms all ease-in-out;
+}
+.homeWrapper .logoImg {
+  margin-bottom: 1.5em;
+}
+.homeWrapper .homeInput:focus {
+  background-color: transparent;
+  border-color: var(--primaryColor);
+  color: white;
+}
+.homeWrapper .homeBtn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-family: "Poppins";
+  font-weight: 600;
+  padding: 0.7em 1.2em;
+  margin-top: 1.7em;
+  border-radius: 20px;
+  transition: 250ms all ease-in-out;
+  border: 1px solid transparent;
+}
+.homeWrapper .homeBtn:hover {
+  border-color: var(--primaryColor);
+  background-color: transparent;
+  color: var(--primaryColor);
+}
+.homeWrapper .notifyText {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: var(--secondaryColor);
+  background-color: #95919c;
+  padding: 0.2em 0.4em;
+  font-family: "Lato";
+}
+body.home .pageHeader.homeHeader {
+  color: aquamarine;
+  font-size: 1.3em;
+  font-weight: 450;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1.5fr 1.6fr 1fr 1.1fr 12fr;
+  text-align: right;
+  padding: 2em 6em 0 6em;
+}
+body.home .pageHeader.homeHeader .walletBtn {
+  padding: 0.4em 1.4em;
+  margin-right: 0;
+}
+body.home .pageHeader.homeHeader .walletBtn img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+/* Offers Page */
+.nftsSection.userSection {
+  text-align: left;
+}
+.nftsSection.userSection .profileAccount {
+  font-weight: 700;
+  color: var(--primaryColor);
+  font-family: "Lato";
+  display: inline-block;
+  border-bottom: 2px solid var(--primaryColor);
+  padding-bottom: 0.6em;
+}
+.nftsSection.userSection .userAccountArea {
+  border: 1px solid #262237;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin-top: 1.5em;
+  transition: 250ms all ease-in-out;
+}
+.nftsSection.userSection .userAccountArea:focus-within {
+  border-color: var(--primaryColor);
+}
+.nftsSection.userSection .userName {
+  font-size: 0.8em;
+  font-weight: 400;
+  font-family: "Lato";
+  color: #f6ecec80;
+}
+.nftsSection.userSection input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  color: var(--secondaryColor);
+  outline: none;
+  font-weight: 700;
+  font-family: "Lato";
+}
+.nftsSection.userSection input::placeholder {
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+}
+.nftsSection.userSection .uploadIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 250ms all ease-in-out;
+}
+.nftsSection.userSection .uploadIcon:hover {
+  opacity: 0.8;
+}
+.nftsSection.userSection .saveBtn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-weight: 800;
+  border-radius: 0.3em;
+  padding: 0.4em 2.5em;
+  transition: 250ms all ease-in-out;
+  font-family: "Lato";
+}
+.nftsSection.userSection .saveBtn:hover {
+  opacity: 0.7;
+}
+.pageHeader.offersHeader .languageBtn {
+  border: none;
+  padding: 0.3em;
+}
+.pageHeader.offersHeader .languageBtn .uploadProgressbarParent {
+  width: 85%;
+  position: relative;
+  margin-top: 0.2em;
+}
+.pageHeader.offersHeader .languageBtn .uploadProgressbarParent .progress {
+  height: 0.8rem;
+  font-size: 0.6em;
+  font-weight: 700;
+  border-radius: 16px;
+  background-color: var(--secondaryColor);
+  margin-left: 2.2em;
+}
+.pageHeader.offersHeader .languageBtn .uploadProgressbarParent .progress-bar {
+  background: linear-gradient(135deg, #ff6fd8 0%, #3813c2 100%);
+  border-radius: 16px;
+}
+.pageHeader.offersHeader
+  .languageBtn
+  .uploadProgressbarParent
+  .levelNotification {
+  background: linear-gradient(135deg, #498db0 0%, #fb30bc 100%);
+  font-size: 0.7em;
+  font-weight: 900;
+  color: var(--secondaryColor);
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  line-height: 1.6;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.pageHeader.offersHeader .socialLinks {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  transition: 200ms all ease-in-out;
+}
+.pageHeader.offersHeader .socialLinks:hover {
+  filter: invert(50%) sepia(88%) saturate(914%) hue-rotate(280deg)
+    brightness(103%) contrast(106%);
+}
+.cardsSection.offersSection .offersLink {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Lato";
+  color: var(--secondaryColor);
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 0.8em;
+  border-bottom: 2px solid transparent;
+  transition: 250ms all ease-in-out;
+  padding-bottom: 0.2em;
+}
+.cardsSection.offersSection .offersLink.active,
+.cardsSection.offersSection .offersLink:hover {
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.cardsSection.offersSection .viewLink {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-weight: 600;
+  border-radius: 0.3em;
+  padding: 0.4em 0.8em;
+  transition: 250ms all ease-in-out;
+  font-family: "Lato";
+}
+.cardsSection.offersSection .viewLink:hover {
+  opacity: 0.7;
+}
+.cardsSection.offersSection .collectionTable {
+  margin-top: 2em;
+}
+.cardsSection.offersSection .collectionTable thead th {
+  text-align: center;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Lato";
+  color: var(--secondaryColor);
+}
+.cardsSection.offersSection .collectionTable tbody td {
+  text-align: center;
+  border: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: "Lato";
+  color: var(--secondaryColor);
+  vertical-align: middle;
+}
+.cardsSection.offersSection .collectionTable thead tr {
+  border: none;
+}
+.cardsSection.offersSection .collectionTable tbody tr {
+  border-bottom: 1px solid #262237;
+}
+.cardsSection.offersSection .collectionTable tbody > tr:last-child {
+  border-bottom: none;
+}
+.cardsSection.offersSection .collectionTable .collectionImg {
+  height: 70px;
+  margin-right: 1.5em;
+}
+.cardsSection.offersSection .collectionTable .colectionTagImg {
+  margin-left: 0.4em;
+}
+.cardsSection.offersSection .collectionTable .collectionColorImg {
+  margin-right: 0.2em;
+}
+.cardsSection.offersSection .collectionTable .collectionsTotal {
+  border: 1px solid var(--secondaryColor);
+  width: 110px;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 0.4em 0.8em;
+  transition: 250ms all ease-in-out;
+}
+.cardsSection.offersSection .collectionTable .collectionsTotal:focus-within {
+  border-color: var(--primaryColor);
+}
+.cardsSection.offersSection .collectionTable .collectionsTotal input {
+  color: var(--secondaryColor);
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  outline: none;
+}
+.cardsSection.offersSection
+  .collectionTable
+  .collectionsTotal
+  input::placeholder {
+  color: var(--secondaryColor);
+}
+.cardsSection.offersSection .collectionTable .collectionsTotal img {
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+.multiNotifications .notiCheckBox {
+  width: 18px;
+  height: 18px;
+}
+.multiNotifications .notiCheckBox {
+  accent-color: var(--primaryColor);
+}
+.multiNotifications .notiHeading {
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  font-size: 0.9em;
+}
+.multiNotifications .notiText {
+  color: #f6ecec80;
+  font-size: 0.7em;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.multiNotifications .multiNoti {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #262237;
+  padding-bottom: 1em;
+  margin-bottom: 1.2em;
+}
+.multiNotifications .multiNoti.odd {
+  border-bottom: none;
+}
+.multiNotifications {
+  margin-top: 3em;
+  padding-left: 2em;
+}
+.multiNotifications .viewLink {
+  padding: 0.4em 2.5em !important;
+}
+.multiAccounts {
+  margin-top: 1.4em;
+  margin-left: 0.8em;
+}
+.multiAccounts .accountHeading {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  margin-bottom: 1em;
+}
+.multiAccounts .accountParent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #262237;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.multiAccounts .accountParent.borderNone {
+  border-bottom: none;
+}
+.multiAccounts .accountParent .accountText {
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: "Lato";
+}
+.multiAccounts .accountParent .accountText.pink {
+  color: var(--primaryColor);
+}
+.multiAccounts .accountParent .accountLinkImg {
+  margin-left: 1em;
+}
+.multiAccounts .accountParent .socialIcon {
+  font-size: 1.4em;
+  color: var(--secondaryColor);
+  margin-right: 0.3em;
+  vertical-align: middle;
+}
+.multiAccounts .accountParent .accountLinkBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  padding: 0.4em 0.7em;
+  font-size: 0.9em;
+  transition: 250ms all ease-in-out;
+  font-family: "Lato";
+  font-weight: 600;
+}
+.multiAccounts .accountParent .accountLinkBtn.unLink {
+  border-color: var(--secondaryColor);
+  color: var(--secondaryColor);
+}
+.multiAccounts .accountParent .accountLinkBtn.odd {
+  border-color: #f6ecec80;
+  color: #f6ecec80;
+}
+.multiAccounts .accountParent.odd {
+  border-bottom: none;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #0e130d;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: "Montserrat";
+  float: left;
+  color: #e6e8e9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  /* background-color: #51cea0; */
+  color: #51cea0;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* background-color: #51cea0; */
+  color: #51cea0;
+}
+
+/* Modal */
+.profileModal .modalHeading {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-family: "Poppins";
+  text-align: center;
+}
+.profileModal .modal-content {
+  background-color: #1e162e;
+  border: 5px solid #f6ecec;
+  border: 10px solid var(--primaryColor);
+  box-shadow: 0 0 30px var(--primaryColor);
+}
+.profileModal .modal-header {
+  border-bottom: none;
+  padding: 0;
+}
+.profileModal .close {
+  padding: 0;
+  margin: 0rem 0.5rem 0 auto;
+  font-size: 2.8em;
+  color: var(--primaryColor);
+  opacity: 1;
+  text-shadow: none;
+  transition: 250ms all ease-in-out;
+}
+.profileModal .profileModalCards {
+  padding: 3.5em 5em 1em 5em;
+}
+.profileModal .profileModalCards .killerCard {
+  margin-bottom: 2em;
+}
+.profileModal .customPaginations {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Cosmic Page */
+.dominateSection {
+  /* background-image: url("../img/dominate-img.png");
+    background-size: 100% 100%; */
+  min-height: 90vh;
+  position: relative;
+  /* display: flex;
+    align-items: flex-end; */
+  border-bottom: 1px solid #262237;
+  padding-bottom: 1em;
+}
+.dominateSection .cosmicVideoTrailer {
+  mix-blend-mode: screen;
+  width: 100%;
+}
+.dominateSection .dominateContents {
+  position: absolute;
+  bottom: 50px;
+  left: 290px;
+  width: 100%;
+}
+.dominateSection .darkOverlay {
+  position: absolute;
+  background-color: #1a00367a;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 52%;
+}
+.dominateSection .dominateHeading {
+  font-size: 4em;
+  margin-bottom: 0.1em;
+  line-height: 1.1;
+  font-weight: 800;
+  color: white;
+  font-family: "Montserrat";
+}
+.dominateSection .dominateText {
+  color: #ffffffe0;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: "Montserrat";
+  line-height: 1.2;
+}
+.dominateSection .dominateButton {
+  display: flex;
+  align-items: center;
+  transition: 250ms all ease-in-out;
+}
+.dominateSection .dominateButton:hover {
+  opacity: 0.7;
+}
+.dominateSection .dominateButton .arrowBtn {
+  background-color: #892279;
+  color: var(--secondaryColor);
+  padding: 1em 0.2em;
+  border-radius: 5px 0px 0px 5px;
+  display: inline-block;
+  font-size: 0.9em;
+  width: 20%;
+  text-align: center;
+}
+.dominateSection .dominateButton .playBtn {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-weight: 800;
+  font-size: 0.9em;
+  border-radius: 0 5px 5px 0;
+  display: inline-block;
+  text-decoration: none;
+  width: 80%;
+  text-align: center;
+  font-family: "Poppins";
+  padding: 1em 0.2em;
+}
+.dominateSection .dominateBtn {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--secondaryColor);
+  color: var(--secondaryColor);
+  font-weight: 800;
+  font-family: "Poppins";
+  font-size: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.4em;
+  transition: 250ms all ease-in-out;
+}
+.dominateSection .dominateBtn i {
+  margin-right: 0.6em;
+}
+.dominateSection .dominateBtn:hover {
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+}
+
+/* Cosmic Section */
+.cardsSection.cosmicSection {
+  border-top: none;
+  padding: 1em 0 3em 0;
+}
+.cardsSection.cosmicSection .headerSearchArea input {
+  border-radius: 7px;
+  background-color: #1c1929;
+  padding: 0.4em 0.8em;
+}
+.cardsSection.cosmicSection .headerSearchArea {
+  background-color: #1c1929;
+  border: 1px solid #262237;
+  border-radius: 7px;
+}
+.cardsSection.cosmicSection .cosmicHeading {
+  color: var(--secondaryColor);
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 1em 0;
+  font-family: "Poppins";
+}
+.owl-carousel.owl-theme.customCollapse .killerCard .cardFooter img {
+  display: unset !important;
+  width: unset !important;
+}
+.owl-carousel.owl-theme.customCollapse .killerCard:hover {
+  transform: unset;
+  box-shadow: unset;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown {
+  min-width: 23rem !important;
+  left: -150px !important;
+  padding: 1em;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownHeader img {
+  height: 70px;
+  margin-right: 0.5em;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #464355;
+  padding-bottom: 0.8em;
+  position: relative;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownHeader
+  .fa-xmark {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #f6ecec80;
+  cursor: pointer;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownHeader
+  .userDropdownHeading {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  line-height: 1.2;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownHeader
+  .userdropdownLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-family: "Lato";
+  font-weight: 500;
+  margin-left: 0.2em;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownBody {
+  padding: 0.5em 0;
+  border-bottom: 2px solid #464355;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownBody a {
+  display: block;
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  padding: 0.6em 0;
+  transition: 250ms all ease-in-out;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownBody a:hover {
+  color: var(--primaryColor);
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownBody a i {
+  margin-right: 1em;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownFooter a {
+  display: flex;
+  color: var(--secondaryColor);
+  font-family: "Lato";
+  text-decoration: none;
+  transition: 250ms all ease-in-out;
+  padding: 0.5em;
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownFooter {
+  padding-top: 0.6em;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownFooter
+  a:hover {
+  color: var(--primaryColor);
+}
+.pageHeader.offersHeader .dropdown-menu.userDropdown .userDropdownFooter a div {
+  font-size: 0.9em;
+  line-height: 1.1;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownFooter
+  .boldTextNumber {
+  font-weight: 800;
+}
+.pageHeader.offersHeader
+  .dropdown-menu.userDropdown
+  .userDropdownFooter
+  a
+  .fa-copy {
+  color: #f6ecec80;
+  margin-left: 0.5em;
+}
+
+/* Main Page */
+.mainSection {
+  padding: 8em 0 4em 0;
+}
+.mainSection .mainPageCard .mainCardImg,
+.mainSection .mainLgCard .mainLgCardImg {
+  width: 100%;
+}
+.mainSection .mainLgCard {
+  width: 90%;
+}
+.mainSection .mainPageCard {
+  position: relative;
+  border-radius: 0.6em;
+  overflow: hidden;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.mainSection .mainPageCard:hover .mainCardContents {
+  background-color: var(--primaryColor);
+}
+.mainSection .mainPageCard .mainCardContents {
+  background-color: #151515bd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0.2em;
+  text-align: center;
+  color: #f6ecec;
+  font-weight: 500;
+  font-size: 1.1em;
+  font-family: "Poppins";
+  transition: 250ms all ease-in-out;
+}
+.mainSection .row.mainRow .mainCol {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.mainSection .mainPageCard.mainLgCard .mainCardContents {
+  font-size: 2.5em;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primaryColor);
+}
+.mainSection .mainPageCard.mainLgCard {
+  border-radius: 1em;
+}
+.mainSection .mainPageCard.mainLgCard .mainCardContents span {
+  color: var(--secondaryColor);
+}
+.mainSection .mainPageCard.mainLgCard:hover .mainCardContents {
+  color: var(--secondaryColor);
+}
+.mainSection .customCollapse .owl-next span {
+  height: 40px;
+  width: 40px;
+  right: 50px;
+  top: 45%;
+}
+
+/* Multi Cards Section */
+.multiCardsSection {
+  border-top: 1px solid #262237;
+  padding: 1.5em 0;
+}
+.multiCardsSection .multiCarouselHeading {
+  font-weight: 700;
+  color: var(--secondaryColor);
+  font-size: 1.6em;
+  display: inline-block;
+  font-family: "Poppins";
+  margin-right: 2.5em;
+}
+.multiCardsSection .multiCarouselTabs .multiCarouselTabLink {
+  font-weight: 500;
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+  font-family: "Poppins";
+  padding: 0.7em 1em;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 250ms all ease-in-out;
+}
+.multiCardsSection .multiCarouselTabs .multiCarouselTabLink:hover,
+.multiCardsSection .multiCarouselTabs .multiCarouselTabLink.active {
+  background-color: var(--primaryColor);
+}
+.multiCardsSection .viewAllLink {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--secondaryColor);
+  border: 1px solid #eeecf633;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 0.6em 1em 0.5em 1em;
+  transition: 250ms all ease-in-out;
+  margin-right: 5em;
+}
+.multiCardsSection .viewAllLink:hover {
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.multiCardsSection .owl-carousel.owl-theme.customCollapse {
+  margin-top: 1.5em;
+}
+.multiCardsSection
+  .owl-carousel.owl-theme.customCollapse
+  .killerCard
+  .cardFooter {
+  text-align: center;
+}
+.multiCardsSection .multicarouselParent {
+  margin-bottom: 1em;
+}
+.multiCardsSection .killerCard .liveContents {
+  background-color: #261325;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  font-weight: 500;
+  font-size: 0.7em;
+  font-family: "Poppins";
+  margin: 0.8em 0 0.5em 0;
+  display: inline-block;
+  color: var(--secondaryColor);
+}
+.multiCardsSection .killerCard .liveContents span {
+  color: #00c054;
+}
+
+/* Top Cards */
+.topCardsHeading {
+  font-weight: 600;
+  color: var(--secondaryColor);
+  font-size: 1.6em;
+  font-family: "Poppins";
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+.topCard {
+  background-color: #120d18;
+  border-radius: 41px;
+  padding: 1.5em 2em;
+  transition: 300ms all ease-in-out;
+  border: 3px solid transparent;
+}
+.topCard:hover {
+  box-shadow: 0 0 20px var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.topCard .topCardNumber {
+  font-weight: 600;
+  color: #f6ececb2;
+  margin-right: 1em;
+  font-size: 0.9em;
+}
+.topCard .topCardName {
+  font-weight: 600;
+  color: var(--secondaryColor);
+  font-size: 0.9em;
+}
+.topCard .topCardTag {
+  border-radius: 4px;
+  width: 70px;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--secondaryColor);
+}
+.topCard .topCardTag.gray {
+  background-color: #9d9d9d;
+}
+.topCard .topCardTag.green {
+  background-color: #00a68c;
+}
+.topCard .topCardTag.red {
+  background-color: #d9475a;
+}
+.topCard .topCardContents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+.topCard .topCardImg {
+  margin-right: 0.5em;
+}
+.topCard .topCardUser {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.topCard .topCardLink {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8em;
+  color: var(--primaryColor);
+  transition: 250ms all ease-in-out;
+}
+.topCard .topCardLink:hover {
+  opacity: 0.7;
+}
+.topCard .topCardLink i {
+  font-size: 0.8em;
+  margin-left: 0.5em;
+}
+
+/* Footer */
+.pageFooter {
+  margin-top: 5em;
+  padding-bottom: 4em;
+}
+.pageFooter .footerBrand {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+.pageFooter .socialHeading {
+  color: #ffffffc4;
+  font-size: 1.2em;
+}
+.pageFooter .socialLink {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 0.7em;
+  margin-bottom: 0.6em;
+  transition: 200ms all ease-in-out;
+}
+.pageFooter .socialLink:hover {
+  opacity: 0.7;
+}
+.pageFooter .linkHeading {
+  color: #ecf6f0;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+.pageFooter .footerLink {
+  color: #ffffffc4;
+  display: block;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  transition: 200ms all ease-in-out;
+}
+.pageFooter .footerLink:hover {
+  color: aqua;
+}
+.pageFooter .copyRight {
+  color: #ffffffc4;
+  font-size: 0.7em;
+  margin-top: 1.5em;
+}
+.pageFooter .footerText {
+  color: #767c84;
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 1em;
+}
+.pageFooter .row.borderRow {
+  border-bottom: 3px solid #ffffffc4;
+  padding-bottom: 1.4em;
+}
+.homeFooter {
+  background: #000;
+  padding: 1em 0;
+  margin-top: 5em;
+}
+.homeFooter .footerLink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.homeFooter .footerNav {
+  color: #e6e8e9;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-right: 1.7em;
+  transition: all ease-in-out 200ms;
+  font-family: "Montserrat";
+}
+.homeFooter .footerNav:hover {
+  color: aqua;
+}
+.homeFooter .footerNav2 {
+  color: #e6e8e9;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-right: 1.7em;
+  width: 160px;
+  cursor: default;
+  transition: all ease-in-out 200ms;
+  font-family: "Montserrat";
+}
+/* Media Query */
+@media (max-width: 992px) {
+  .midContents .blackBox {
+    margin-bottom: 1em;
+    height: unset;
+    padding: 1em 0.5em;
+  }
+  .cardsSection .row.searchContents {
+    text-align: right;
+  }
+  .cardsSection .multiInputs {
+    display: inline-block;
+  }
+  .cardsSection .row.searchContents .dropdown {
+    display: inline-block;
+  }
+  .cardsSection .row.searchContents .headerSearchArea {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .cardsSection .iconSpan {
+    display: inline-block;
+  }
+  .cardsSection .row.searchContents .col-lg-4,
+  .cardsSection .row.searchContents .col-lg-3,
+  .cardsSection .row.searchContents .col-lg-2,
+  .cardsSection .row.searchContents .col-lg-1,
+  .cardsSection .row.searchContents .col-lg-6 {
+    margin: 1em 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .midContents .addBtn {
+    margin-top: 1em;
+  }
+  .bannerSection .socialIcons {
+    bottom: 40px;
+    right: 50px;
+  }
+  .pageHeader .headerContents {
+    display: none;
+  }
+  .headerSearchArea {
+    margin-left: 1.5em;
+  }
+  .pageHeader .headerButtons {
+    width: 35%;
+    text-align: center;
+  }
+  .cardsSection .killerCard {
+    margin-bottom: 3em;
+  }
+  .filterMenu {
+    top: 45px;
+  }
+  .killerTableWrapper .killerTable .killerTabelImg {
+    margin: auto auto 1em auto;
+    display: block;
+  }
+  .sideMenu {
+    padding-top: 6.5em;
+  }
+  .pageHeader .walletBtn {
+    margin-right: 0;
+  }
+  .socialDetails {
+    padding: 2em;
+  }
+  .socialDetails .socialDetailsIconLink {
+    top: 20px;
+    right: 50px;
+  }
+  .killerTableWrapper .killerTableHeader {
+    padding: 0.6em 2em 0 1.5em;
+  }
+  .cardsSection .row.searchContents .customBtn.odd {
+    display: inline-block;
+    width: unset;
+  }
+  .tabMenuLinks .tabMenuLink {
+    margin: 0.4em 0.6em;
+  }
+  .killerTableWrapper {
+    overflow-x: scroll;
+  }
+  .killerTableWrapper .killerTable {
+    width: 1000px;
+  }
+  .buyNftSection .attributeCollapse .collapseDetailsBody {
+    margin-bottom: 1.2em;
+  }
+  .buyNftSection {
+    padding-top: 0;
+    padding-bottom: 4em;
+  }
+  .cardsSection.offersSection .collectionTable .collectionImg {
+    height: 55px;
+    display: block;
+    margin: 0 auto 0.8em auto;
+  }
+  .cardsSection.offersSection .offersLink {
+    font-size: 1em;
+    margin: 0 0.5em;
+  }
+  .cardsSection.offersSection .collectionTable thead th {
+    font-size: 1em;
+  }
+  .cardsSection.offersSection .collectionTable .collectionsTotal {
+    width: 90px;
+  }
+  .multiNotifications {
+    padding-left: 0;
+  }
+  .profileModal .profileModalCards {
+    padding: 1em;
+  }
+  .profileModal .modalHeading {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+  .pageHeader .walletBtn i {
+    display: none;
+  }
+  .buyNftSection .collapseButton .collapseBtn.borderBtn {
+    margin-left: 0.7em;
+  }
+  .buyNftSection .collapseButton .collapseBtn {
+    max-width: 150px;
+  }
+  .dominateSection .dominateHeading {
+    font-size: 2.5em;
+  }
+  .dominateSection {
+    min-height: 55vh;
+    background-size: cover;
+    padding-top: 2em;
+  }
+  .mainSection .mainPageCard.mainLgCard .mainCardContents {
+    font-size: 1.3em;
+  }
+  .mainSection .mainPageCard .mainCardContents {
+    font-size: 0.8em;
+    line-height: 1.1;
+  }
+  .mainSection .mainLgCard {
+    width: 100%;
+  }
+  .mainSection .customCollapse .owl-next span {
+    top: 5%;
+    right: 10px;
+  }
+  .mainSection .row.mainRow {
+    flex-wrap: wrap-reverse;
+  }
+  .mainSection .mainPageCard.mainLgCard {
+    margin-bottom: 1em;
+  }
+  .mainSection {
+    padding: 4em 0 2em 0;
+  }
+  .pageFooter {
+    margin-top: 2em;
+  }
+  .multiCardsSection .viewAllLink {
+    margin-right: 0;
+    margin-top: 1em;
+  }
+  .multiCardsSection .multiCarouselTabs {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  .bannerSection .brandCircelImg {
+    height: 42px;
+  }
+  .analyticsCharts .chartHeader {
+    display: block;
+  }
+  #nav-tab .daysLink {
+    margin-bottom: 1em;
+  }
+  .dominateSection .dominateContents {
+    padding-left: 1em;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    margin-top: 1em;
+  }
+  .pageHeader.offersHeader .dropdown-menu.userDropdown {
+    top: 25px !important;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .filterMenu {
+    left: 0px;
+  }
+  .pageHeader .walletBtn img,
+  .pageHeader .languageBtn img,
+  .pageHeader .languageBtn i {
+    display: none;
+  }
+  .pageHeader .walletBtn,
+  .pageHeader .languageBtn {
+    padding: 0.2em 0.7em;
+    margin-bottom: 0;
+    font-size: 0.8em;
+  }
+  .headerSearchArea {
+    margin: 0 0.5em;
+  }
+  .pageHeader .menuBtn {
+    margin-right: 0.8em;
+  }
+  .dominateSection .dominateText {
+    font-size: 1em;
+  }
+  .dominateSection .dominateHeading {
+    font-size: 1.6em;
+  }
+  body.home .pageHeader.homeHeader {
+    padding: 2em;
+  }
+}
+
+/* 554px */
+@media (max-width: 554px) {
+  .pageHeader .headerSearchArea {
+    display: none;
+  }
+  .pageHeader .headerButtons {
+    width: 50%;
+    text-align: right;
+  }
+  .pageHeader .menuBtn {
+    margin-right: 2em;
+    height: 20px;
+  }
+  .bannerSection .bannerImg {
+    margin-top: 1em;
+  }
+  .midContents .addBtn a {
+    font-size: 0.8em;
+    padding: 0.5em 0.8em;
+  }
+  .sideMenu .sideMenuLink img {
+    height: 20px;
+  }
+  .bannerSection .socialIcons a img {
+    height: 13px;
+  }
+  .bannerSection .socialIcons {
+    padding: 0.3em 0.2em;
+  }
+  .bannerSection .socialIcons {
+    bottom: 15px;
+    right: 15px;
+  }
+  .bannerSection .socialIcons a {
+    margin: 0 0.3em;
+  }
+  .mainHeading {
+    font-size: 1.8em;
+    margin-left: 1em;
+  }
+  .midContents .blackBox .totals {
+    font-size: 1em;
+  }
+  .midContents .blackBox .totals img {
+    vertical-align: middle;
+    height: 19px;
+  }
+  .midContents .blackBox .grayHeading i {
+    margin-left: 0.8em;
+    font-size: 0.9em;
+  }
+  .sideMenu {
+    z-index: 800;
+  }
+  .socialDetails .socialDetailsText {
+    font-size: 0.9em;
+  }
+  .socialDetails .socialDetailsIconLink {
+    top: 20px;
+    right: 10px;
+  }
+  .cardsSection.socialSection .borderDiv {
+    margin-left: unset;
+  }
+  .socialDetails .imageSide img {
+    width: 53px;
+  }
+  .socialDetails .socialDetailsIconLink {
+    font-size: 0.9em;
+  }
+  .cardsSection.socialSection .socialLinks .socialLink {
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+  }
+  .socialDetails .socialLgImg {
+    margin-bottom: 0.8em;
+  }
+  .socialDetails {
+    padding: 2em 1.2em;
+  }
+  .analyticsCharts .chartHeading {
+    font-size: 1em;
+  }
+  .analyticsCharts .daysLink {
+    margin-left: 0.5em;
+  }
+  .pageHeader {
+    justify-content: space-between;
+  }
+  .pageHeader.offersHeader .socialLinks {
+    margin-right: 0.3em;
+  }
+  .pageHeader.offersHeader .languageBtn {
+    font-size: 0.8em;
+  }
+  .analyticsCharts .chartParent .chartPercentParent {
+    display: none;
+  }
+
+  /* .pageHeader .logoSide img {
+      height: 85px;
+    } */
+}
