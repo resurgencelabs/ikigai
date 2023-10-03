@@ -9,6 +9,7 @@ import {
   Route,
   
 } from "react-router-dom";
+import { Landing } from './landing.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -27,7 +28,10 @@ root.render(
           props we passes the imported component*/}
           <Route path="/about" element={<About/>} />
             
-          
+           {/* This route is for about component 
+          with exact path "/landing", in component 
+          props we passes the imported component*/}
+          <Route path="/landing" element={<Landing/>} />
             
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 
@@ -39,4 +43,6 @@ root.render(
   </React.StrictMode>,
 );
 
-
+export function hi(){
+  console.log("hi");
+}

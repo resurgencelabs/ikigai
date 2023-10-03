@@ -1,0 +1,107 @@
+.main {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
+}
+
+.logo {
+    position: fixed;
+    cursor: pointer;
+    top: 35px;
+    left: 30px;
+    height: 35px;
+}
+
+.privateBackground {
+    transform: rotate(-20deg);
+    width: 150vw;
+    height: 150vh;
+    font-weight: 500;
+    opacity: 0.3;
+    font-size: 14px;
+    pointer-events: none;
+    position: absolute;
+    font-size: 14px;
+    z-index: 0;
+}
+
+.superButton {
+    background-color: rgb(3, 3, 37);
+    color: whitesmoke;
+    padding: 1%;
+    border-radius: 6%;
+
+}
+
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 1rem;
+  }
+
+
+  .header .topnav {
+    opacity: 0.9;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .header .topnav a {
+    font-family: "Montserrat";
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Change the color of links on hover */
+  .header .topnav a:hover {
+    /* background-color: #51cea0; */
+    color: #51cea0;
+  }
+  
+  /* Add a color to the active/current link */
+  .header .topnav a.active {
+    /* background-color: #51cea0; */
+    color: #51cea0;
+  }
+  
+  .homeWrapper {
+    text-align: center;
+    padding: 6em 3em;
+  }
+  .homeWrapper .homeText {
+    color: #ff5aeeb0;
+    font-family: "Poppins";
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  .homeWrapper .homeText2 {
+    color: aqua;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:300%;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+
+  .homeWrapper .homeImg {
+    margin-bottom: 4.5em;
+  }
+
+  .home {
+    overflow: auto;
+  }
+
+  .pointers {
+    font-style: italic;
+    font-weight: 800;
+  }
