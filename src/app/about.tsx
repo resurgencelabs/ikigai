@@ -5,6 +5,9 @@ import Col from 'react-bootstrap/Col';
 export function About(){
     return (
         <div className={styles.home}>
+   
+    
+    <div className={styles.homeWrapper}>
     <div className={styles.header}>
       <a><img src="./home-img.png" alt="" height="80" width="80" /></a>
 
@@ -16,8 +19,6 @@ export function About(){
         
       </div>
     </div>
-    
-    <div className={styles.homeWrapper}>
       <div className={styles.homeText2} >About Ikigai</div>
       <img className={styles.homeImg} src="./home-img.png" width={170} height={100} alt="" />
       <br />
@@ -50,6 +51,7 @@ export function About(){
       
       
     </div>
+    <br/><br/><br/><br/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   </div>

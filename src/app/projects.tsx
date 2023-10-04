@@ -24,6 +24,8 @@ function goto_landing(){
 export function Projects(){
     return (
       <div id="bod" className={styles.home} onLoad={() =>load_projects_all()}>
+        
+        <div className={styles.homeWrapper}>
         <div className={styles.header}>
             <a><img src="./home-img.png" alt="" height="80" width="80" /></a>
     
@@ -35,8 +37,7 @@ export function Projects(){
               
             </div>
         </div>
-        <div className={styles.homeWrapper}>
-          <img id="h_im" className={styles.homeImg} src="./home-img.png" alt="" />
+          <img id="h_im" className={styles.homeImg} src="./home-img.png" alt="" height="100" width="100"/>
           <br />
           <div>
             <div id="h_tx" className={styles.homeText2}>Browse the Current Projects</div>
@@ -100,6 +101,7 @@ export function Projects(){
               
             </div>
           </div>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </div>
         
     );

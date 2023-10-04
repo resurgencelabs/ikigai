@@ -24,6 +24,9 @@ function goto_landing(){
 export function Landing(){
     return (
         <div id="bod" className={styles.home}>
+        
+      
+        <div className={styles.homeWrapper} > 
         <div className={styles.header}>
           <a><img src="./home-img.png" alt="" height="80" width="80" /></a>
     
@@ -35,8 +38,7 @@ export function Landing(){
             
           </div>
         </div>
-      
-        <div className={styles.homeWrapper} > 
+        <br/><br/><br/><br/><br/>
           <div className={styles.row}>
             <div className={styles.collg2}>
               <div className={styles.homeText}></div>
@@ -62,43 +64,7 @@ export function Landing(){
           </div>
         </div>
         
-        <footer className={styles.homeFooter}>
-          <div className={styles.container}>
-            <div className={styles.row}>
-              <div className={styles.collg8}>
-                <div className={styles.footerLink}>
-                  <a
-                    ><img src="./img/home-img.png" alt="" height="100" width="100"
-                  /></a>
-                  <a
-                    ><img
-                      src="./img/home-img.png"
-                      alt=""
-                      height="30"
-                      width="30"
-                      style={{visibility: "hidden"}}
-                  /></a>
-                  <a className={styles.footerNav2}
-                    >Resurgence Labs Inc © 2023 All Rights Reserved</a
-                  >
-                  <a target="_blank" href="./about.html" className={styles.footerNav}>about</a>
-                  <a
-                    target="_blank"
-                    href="https://docs.google.com/document/d/1QjUSCfs_4Pjicf6DM1xDJC38_9wtl9d2-f1P5V4n6_o/edit?usp=sharing"
-                    className={styles.footerNav}
-                    >privacy policy</a
-                  >
-                  <a
-                    target="_blank"
-                    href="https://docs.google.com/document/d/1nDRvixpSWLnjxbeX-hGXFpufSRq8UidupEhR-AWzvak/edit?usp=sharing"
-                    className={styles.footerNav}
-                    >terms of service</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <br/><br/><br/><br/><br/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
       </div>

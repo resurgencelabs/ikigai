@@ -67,6 +67,8 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(#f6fbfc, #d8d4e7);
+  max-height: 100vh;
+  overflow: auto;
 }
 
 #root {

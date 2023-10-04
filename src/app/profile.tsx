@@ -22,22 +22,21 @@ export function Profile(){
   }
     return (
         <div className={styles.home} onLoad={() => load_profile()}>
+    
+    
+    <div className={styles.homeWrapper}>
     <div className={styles.header}>
       <a><img src="./home-img.png" alt="" height="80" width="80" /></a>
 
       <div className={styles.topnav}>
-        <a  href="/index">Home</a>
+        <a  href="/landing">Home</a>
         <a href="/projects">Projects</a>
         <a href="/about">About</a>
         <a className={styles.active} href="/profile">Profile</a>
         
       </div>
     </div>
-    
-    <div className={styles.homeWrapper}>
-      <div className={styles.homeText2} style={{color: "aquamarine"}}>Edit Your Profile</div>
       
-      <br />
       
      
       <div className={styles.row}>
@@ -89,6 +88,7 @@ export function Profile(){
       
       
     </div>
+    <br/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   </div>

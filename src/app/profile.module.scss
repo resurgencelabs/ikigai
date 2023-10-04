@@ -162,6 +162,7 @@
   padding: 4em 7em;
   position: relative;
   left: 10%;
+  height: 650px;
 }
 .formBody .commonLabel {
   font-weight: 500;
@@ -194,7 +195,7 @@
   font-weight: 600;
   color: black;
   letter-spacing: 2px;
-  background-color: cyan;
+  background-color: rgb(251, 255, 0);
   padding: 0.7em 1em;
   border: none;
   outline: none;
@@ -207,6 +208,6 @@
 .formBtn:hover {
   transform: translateY(-4px);
   border-color: #df0053;
-  color: #df0053;
-  background-color: #ffe8f0;
+  color: #e4d2d8;
+  background-color: #fa0a5e;
 }
