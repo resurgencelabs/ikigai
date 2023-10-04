@@ -61,8 +61,8 @@ export function Home() {
     return Array(times).fill(word).join(' ');
   }
 
-  function goto_about(){
-    window.location.href="/about";
+  function goto_landing(){
+    window.location.href="/landing";
     
     //window.location.href = "./about.html";
   }
@@ -71,7 +71,7 @@ export function Home() {
     <main className={styles.main}>
       {privateMode ? <div className={styles.privateBackground}>{generatePrivateString()}</div> : null}
       <img src="aztec_logo.svg" alt="Aztec" className={styles.logo} />
-      <div id="test_f" className={styles.superButton} onClick={() => goto_about()}>Go To Ikigai</div>
+      <div id="test_f" className={styles.superButton} onClick={() => goto_landing()}>Go To Ikigai</div>
       <>
         {isLoadingWallet && <Loader />}
         {!isLoadingWallet && (

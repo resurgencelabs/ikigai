@@ -9,10 +9,10 @@ export function About(){
       <a><img src="./home-img.png" alt="" height="80" width="80" /></a>
 
       <div className={styles.topnav}>
-        <a  href="./index.html">Home</a>
-        <a href="./projects.html">Projects</a>
-        <a className={styles.active} href="./about.html">About</a>
-        <a href="./profile.html">Profile</a>
+        <a  href="/landing">Home</a>
+        <a href="/projects">Projects</a>
+        <a className={styles.active} href="/about">About</a>
+        <a href="/profile">Profile</a>
         
       </div>
     </div>
