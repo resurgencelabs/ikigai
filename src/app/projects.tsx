@@ -42,18 +42,18 @@ export function Projects(){
           <div>
             <div id="h_tx" className={styles.homeText2}>Browse the Current Projects</div>
             <div className={styles.searchArea} id="searcher">
-              <div className={styles.row}>
-                <div className={styles.collg11}>
+              <div className={styles.row} style={{display:"flex",position:"relative"}}>
+                
                   <input
                     type="search"
                     id="project_key"
                     className={styles.searchBox}
                     placeholder="Search by project name  "
+                    
                   />
-                </div>
-                <div className={styles.collg1}>
-                  <span id="sbtn" className={styles.searchBtn} onClick={() => project_search()}>Search</span>
-                </div>
+                  <div id="sbtn" className={styles.searchBtn} onClick={() => project_search()}>Go</div>
+                
+                
               </div>
             </div>
           </div>
