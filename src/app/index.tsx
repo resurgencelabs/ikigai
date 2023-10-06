@@ -14,10 +14,14 @@ import  { Projects } from './projects.js';
 import { Profile } from './profile.js';
 import { type } from 'os';
 import { ProjectDetails } from './projectdetails.js';
+import { Misc } from './misc.js';
+import { Gallery } from './gallery.js';
+import { Updates } from './updates.js';
+import { Chats } from './chats.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <React.StrictMode>
+  
     <>
       {/* This is the alias of BrowserRouter i.e. Router */}
       <Router>
@@ -51,6 +55,26 @@ root.render(
           with exact path "/project_details", in component 
           props we passes the imported component*/}
           <Route path="/project_details" element={<ProjectDetails/>} />
+
+          {/* This route is for about component 
+          with exact path "/gallery", in component 
+          props we passes the imported component*/}
+          <Route path="/gallery" element={<Gallery/>} />
+
+          {/* This route is for about component 
+          with exact path "/misc", in component 
+          props we passes the imported component*/}
+          <Route path="/misc" element={<Misc/>} />
+
+          {/* This route is for about component 
+          with exact path "/chats", in component 
+          props we passes the imported component*/}
+          <Route path="/chats" element={<Chats/>} />
+
+          {/* This route is for about component 
+          with exact path "/updates", in component 
+          props we passes the imported component*/}
+          <Route path="/updates" element={<Updates/>} />
             
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 
@@ -59,7 +83,7 @@ root.render(
         </Routes>
       </Router>
     </>
-  </React.StrictMode>,
+  ,
 );
 
 export function hi(){
@@ -104,6 +128,8 @@ export function to_details_page(id: Number){
 export function load_projects_all() {
   //document.getElementById("project_key")!.value = "";
   localStorage.setItem("projId", "0");
+  localStorage.setItem("tierId", "none");
+  localStorage.setItem("counter_iki", "0");
   var factor = 5;
   var i = 0;
   var root = document.getElementById("rootx")!;
@@ -697,16 +723,19 @@ export function load_project() {
   
 }
 
-export function tier_redirect(selection: String){
-  var tier = selection;//document.getElementById('tr').value;
+export function tier_redirect(selection: string){
+  var tier = selection;
   console.log(tier);
-  return;
+  
   var pid = localStorage.getItem("projId");
+  localStorage.setItem("tierId", tier);
   if (tier == 'noir' || tier == 'platinum') {
     window.location.href = "/misc";
   }
   else if (tier == 'gold') {
-    if (pid == '1'){}
+    if (pid == '1'){
+      window.location.href = "/gallery";
+    }
     else {
       window.location.href = "/chats";
     }
@@ -724,4 +753,183 @@ export function tier_redirect(selection: String){
   }
   else {}
 
+}
+
+export function load_misc() {
+  
+  var tier = localStorage.getItem("tierId") || "none";
+  tier = tier.toUpperCase();
+  var pname = "";
+  var proj = localStorage.getItem("projId") || "0";
+  if (proj == "1") {
+    pname = "Stray Rescue St Louis";
+  }
+  else if (proj == "2") {
+    pname = "Hot or Not";
+  }
+  else {}
+  document.getElementById('ttl')!.textContent = pname.concat(" ").concat(tier).concat(" Tier");
+}
+
+export function get_pics() {
+  var arr = [];
+  var p = localStorage.getItem("projId") || "0";
+  if (p == "1") {
+    arr.push(['derek', 'p1.png']);
+    arr.push(['josh', 'p2.png']);
+    arr.push(['erik', 'p3.png']);
+    arr.push(['miguel', 'p4.png']);
+    arr.push(['cheng', 'p5.png']);
+    arr.push(['abdul', 'p6.png']);
+    
+  }
+  
+  return arr;
+}
+
+
+export function load_gallery() {
+  var tier = localStorage.getItem("tierId") || "none";
+  tier = tier.toUpperCase();
+  var pname = "";
+  var proj = localStorage.getItem("projId") || "0";
+  var pics = get_pics();
+  var root = document.getElementById('rootx')!;
+  var i = 0;
+  var childrenIfAny = root.childNodes;
+  while (childrenIfAny.length != 0){
+    var e = childrenIfAny[0];
+    e.remove();
+    childrenIfAny = root.childNodes;
+  }
+  var elr = document.createElement('div');
+  elr.className = 'row cardRow';
+  while (i < pics.length){
+    if (i % 4 == 0 && i != 0){
+      root.appendChild(elr);
+      var space = document.createElement('br');
+      root.appendChild(space);
+      space = document.createElement('br');
+      root.appendChild(space);
+      elr = document.createElement('div');
+      elr.className = 'row cardRow';
+    }
+    var el = document.createElement('div');
+    el.className = "col";
+    el.innerHTML = `
+    <div class="exploreCardBody">
+                        <div class="exploreCard">
+                          <img
+                            class="homeImg2"
+                            src="`.concat(pics[i][1]).concat(`"
+                            alt=""
+                            style="width: 600px; height: 350px; object-fit: fill;"
+                           
+                          />
+                          <div class="exploreCardFooter" style="text-align:right;" >
+                            <div class="exploreCardText">`
+                              .concat("").concat(
+                            `</div>
+                          </div>
+                        </div>
+                        <div class="exploreCardButton">
+                          <a id="icpvg" class="exploreCardBtn"`.concat(pics[i][0]).concat(`">`.concat(pics[i][0]).concat(`</a>
+                        </div>
+                      </div>
+    `))));
+    
+    elr.appendChild(el);
+    i += 1;
+  }
+  console.log(i);
+  console.log(tier);
+  console.log(proj);
+}
+
+
+export function get_news() {
+  var a = [];
+  var pid = localStorage.getItem("projId") || "0";
+  var s = "";
+  if (pid == "2") {
+    s = "Hot or Not";
+  }
+  else if (pid == "1") {
+    s = "Stray Rescue St Louis";
+  }
+  else {}
+
+  if (s == "Hot or Not") {
+    a.push(["21 Sep 2023", "", "Hot or Not Update 1"]);
+    a.push(["12 Sep 2023", "", "Hot or Not Update 2"]);
+    a.push(["31 Aug 2023", "", "Hot or Not Update 3"]);
+    a.push(["20 Aug 2023", "", "Hot or Not Update 4"]);
+    a.push(["3 Aug 2023", "", "Hot or Not Update 5"]);
+    a.push(["21 Jul 2023", "", "Hot or Not Update 6"]);
+    a.push(["21 Jul 2023", "", "Hot or Not Update 7"]);
+    a.push(["9 Jul 2023", "", "Hot or Not Update 8"]);
+    a.push(["29 Jun 2023", "", "Hot or Not Update 9"]);
+    a.push(["20 Jun 2023", "", "Hot or Not Update 10"]);
+
+  }
+  else if (s == "Stray Rescue St Louis") {
+    a.push(["21 Sep 2023", "", "Stray Rescue Update 1"]);
+    a.push(["12 Sep 2023", "", "Stray Rescue Update 2"]);
+    a.push(["31 Aug 2023", "", "Stray Rescue Update 3"]);
+    a.push(["20 Aug 2023", "", "Stray Rescue Update 4"]);
+    a.push(["3 Aug 2023", "", "Stray Rescue Update 5"]);
+    a.push(["21 Jul 2023", "", "Stray Rescue Update 6"]);
+    a.push(["21 Jul 2023", "", "Stray Rescue Update 7"]);
+    a.push(["9 Jul 2023", "", "Stray Rescue Update 8"]);
+    a.push(["29 Jun 2023", "", "Stray Rescue Update 9"]);
+    a.push(["20 Jun 2023", "", "Stray Rescue Update 10"]);
+  }
+  return a;
+}
+
+export function publish_chat(s: string) {
+  console.log(s);
+}
+
+export function get_chats() {
+  var a = [];
+  var s = "";
+  var pid = localStorage.getItem("projId") || "0";
+  if (pid == "2") {
+    s = "Hot or Not";
+  }
+  else if (pid == "1") {
+    s = "Stray Rescue St Louis";
+  }
+  else {}
+  if (s == "Hot or Not") {
+    a.push(["27 Sep 2023 12:13", "admin", "I will ban you for asking that -_-"]);
+    a.push(["27 Sep 2023 12:01", "you", "Mainnet launch when?"]);
+    a.push(["27 Sep 2023 22:47", "defxxx", "What's new here?"]);
+    a.push(["27 Sep 2023 20:08", "abc123", "Thanks"]);
+    a.push(["26 Sep 2023 16:55", "admin", "Welcome :)"]);
+    a.push(["26 Sep 2023 16:00", "abc123", "Thanks. New here"]);
+    a.push(["26 Sep 2023 15:49", "admin", "Hello Everyone. Thanks for joining"]);
+   
+
+  }
+  else if (s == "Stray Rescue St Louis") {
+    a.push(["27 Sep 2023 12:13", "admin", "They are all fine!"]);
+    a.push(["27 Sep 2023 12:01", "you", "Same question"]);
+    a.push(["27 Sep 2023 22:47", "def123", "How are the dogs doing?"]);
+    a.push(["27 Sep 2023 20:08", "abcpqr", "Thanks"]);
+    a.push(["26 Sep 2023 16:55", "admin", "Welcome :)"]);
+    a.push(["26 Sep 2023 16:11", "abcpqr", "Thanks. New here"]);
+    a.push(["26 Sep 2023 15:16", "admin", "Hello Everyone. Thanks for joining"]);
+  }
+  return a;
+}
+
+export function fetch_all_userdata() {
+  var arr = [];
+  arr.push(["kai", "abc@gmail.com", "kai_suki"]);
+  arr.push(["arun", "arun@gmail.com", "a_run"]);
+  arr.push(["brunny", "bruno@aztec.network", "brunny_eth"]);
+  arr.push(["joe", "joe.mama@gmail.com", "dark_brandon"]);
+  return arr;
 }

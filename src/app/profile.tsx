@@ -1,20 +1,49 @@
 import styles from './profile.module.scss';
-import { get_user_data } from './index.js';
-import { useRef } from 'react';
+import { get_user_data, fetch_all_userdata } from './index.js';
+import { useState, useEffect, useRef } from 'react';
 
 
 export function Profile(){
   
-  const inputRef1 = useRef(null);
-  const inputRef2 = useRef(null);
-  const inputRef3 = useRef(null);
-  function handleClick() {
+  const [selectedUname, setSelectedUname] = useState(''); 
+  const [selectedEmail, setSelectedEmail] = useState(''); 
+  const [selectedDname, setSelectedDname] = useState(''); 
+  function handleClick(s1: string, s2: string, s3: string) {
     var arr = get_user_data();
-    if (inputRef1.current !== null) {
-      console.log(inputRef1.current);
+    console.log(s1.concat(s2).concat(s3));
+    var data = fetch_all_userdata();
+    var flag1 = true;
+    var flag2 = true;
+    var flag3 = true;
+    var i = 0;
+    while (i < data.length) {
+      if (data[i][0] == s1) {
+        document.getElementById('response')!.textContent = "That username is taken!";
+        flag1 = false;
+        return;
+      }
+      if (data[i][1] == s2) {
+        document.getElementById('response')!.textContent = "That email is taken!";
+        flag2 = false;
+        return;
+      }
+      if (data[i][2] == s3) {
+        document.getElementById('response')!.textContent = "That discord id is taken!";
+        flag3 = false;
+        return;
+      }
+      i += 1;
     }
+
     
-    
+
+    if (s1=="" || s2=="" || s3==""){
+      document.getElementById('response')!.textContent = "All fields are mandatory!";
+      return;
+    }
+
+    document.getElementById('response')!.textContent = "New Preferences have been Saved";
+  
     
   }
   function load_profile() {
@@ -50,7 +79,8 @@ export function Profile(){
                 className={styles.commonInput}
                 type="text"
                 placeholder=""
-                ref={inputRef1}
+                value={selectedUname} 
+                onChange={e => setSelectedUname(e.target.value)}
                 
                 
               />
@@ -62,7 +92,8 @@ export function Profile(){
                 className={styles.commonInput}
                 type="text"
                 placeholder=""
-                ref={inputRef2}
+                value={selectedEmail} 
+                onChange={e => setSelectedEmail(e.target.value)}
                 
               />
               <label className={styles.commonLabel} htmlFor=""
@@ -73,10 +104,11 @@ export function Profile(){
                 className={styles.commonInput}
                 type="text"
                 placeholder=""
-                ref={inputRef3}
+                value={selectedDname} 
+                onChange={e => setSelectedDname(e.target.value)}
                 
               />
-            <button type="button" className={styles.formBtn} onClick={handleClick}>Save</button>
+            <button type="button" className={styles.formBtn} onClick={() => {handleClick(selectedUname, selectedEmail, selectedDname), setSelectedUname(''), setSelectedEmail(''), setSelectedDname('')}}>Save</button>
             </div>
             <br/>
             <br/>

@@ -13,5 +13,6 @@ export declare function load_projects_nft(): void;
 export declare function load_projects_other(): void;
 export declare function project_search(): void;
 export declare function load_project(): void;
-export declare function tier_redirect(): void;
+export declare function tier_redirect(selection: string): void;
+export declare function load_misc(): void;
 //# sourceMappingURL=index.d.ts.map
