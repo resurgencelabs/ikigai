@@ -1,2 +1,4 @@
 node_modules
 dest
+src/contracts/subscription/target
+src/contracts/token/target
